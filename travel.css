@@ -80,12 +80,7 @@ nav {
   /* Basic CSS for the report section */
  
   
-   .container {
-    margin-top: 420px;
-    margin-bottom: 10px;
-    align-content: left
-     
-  };
+  
 
   #explanation {
     margin-top: 20px;
@@ -105,15 +100,30 @@ nav {
   #textbox {
     margin-top: 20px;
     margin-left: 40px;
+    
+  }
+  #information {
+    margin-top: 20px;
+    margin-left: 40px;
   }
   .textArea {
     margin-right: 1000px;
     
   }
-  
+  .container {
+    margin-top: 420px;
+    margin-bottom: 10px;
+    align-content: left
+     
+  };
+  .aboutUsContainer{
+   margin-top: 100px;
+
+  }
+
   .contact-container {
     display: flex;  /* Aligns items in a row */
-  align-items: center; /* Aligns items vertically */
+    align-items: center; /* Aligns items vertically */
    gap: 20px; /* Adds spacing between elements */
   }
   
@@ -122,5 +132,30 @@ nav {
   height: 20px; 
     width: 300px;
     font-weight: bold;
+
+  }
+  .personContainer {
+    margin-left: 40px;
+    display: flex;  /* Aligns items in a row */
+    align-items: center; /* Aligns items vertically */
+    gap: 50px; /* Adds spacing between elements */
+  }
+  .personCard {
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   width: 500px;
+   height: 300px;
+   margin: 0px;
+   margin-top:20px;
+   
+
+  }
+  .CardSection {
+    background-color: #f0f0f06e;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+    vertical-align: middle;
 
   }
