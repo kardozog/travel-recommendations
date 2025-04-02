@@ -1,0 +1,132 @@
+/* Basic CSS for the navigation bar */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+    
+  }
+  
+  nav ul {
+    list-style-type: none;
+    
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+    
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    
+  }
+  #navHeader {
+    margin-left: 20px;
+  }
+  
+  /* Basic CSS for the form elements */
+  body {
+    font-family: Arial, sans-serif;
+   
+    background-image: url('backgroundimage1.jpeg');
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+  
+  
+  div {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 200px;
+    padding: 5px;
+  }
+  
+  button {
+    padding: 7px 15px;
+    background-color: lightseagreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: darkseagreen;
+  }
+  
+  /* Basic CSS for the report section */
+  h2 {
+    margin-top: 30px;
+  }
+  
+  #report,#result {
+    padding: 10px;
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+#result{
+  height: 400px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+  #result img{
+    width: 200px;
+    height: 100px;
+  }
+   .container {
+    margin-top: 420px;
+    margin-bottom: 10px;
+    align-content: left
+    
+    
+  }
+  #explanation {
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+  #bookPlace{
+    margin-top: 30px;
+    margin-left: 40px;
+    
+  }
+  #baslik {
+    margin-top: 30px;
+    margin-left: 40px;
+    
+  }
+ 
+  #textbox {
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+  .textArea {
+    margin-right: 1000px;
+    
+  }
