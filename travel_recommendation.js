@@ -3,16 +3,16 @@ const resetButton = document.getElementById("btnReset")
 
 function searchCondition() {
     const input = document.getElementById('btnSearch').value.toLowerCase();
-    const resultDiv = document.getElementById('result');
+    const resultDiv = document.getElementById("resultDiv");
 
     fetch('travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
             let matchedCategory = null;
 
-            if (input.includes("beach")) {
+            if (input.includes("beach" || input.includes("beaches"))) {
                 matchedCategory = "beaches";
-            } else if (input.includes("temple")) {
+            } else if (input.includes("temple")|| input.includes("temples")) {
                 matchedCategory = "temples";
             } else if (input.includes("country") || input.includes("countries")) {
                 matchedCategory = "countries";
@@ -40,8 +40,11 @@ function searchCondition() {
             });
         })
 
+        .catch(error => {
+            console.error("Error fetching JSON:", error);
+            resultDiv.innerHTML = "<p>Failed to load data. Please try again later.</p>"; });
 
-            };
+         };
        
         
 
