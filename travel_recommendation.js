@@ -2,7 +2,7 @@ const resetButton = document.getElementById("btnReset")
 
 
 function searchCondition() {
-    const input = document.getElementById('btnSearch').value.toLowerCase();
+    const input = document.getElementById('conditionInput').value.toLowerCase();
     const resultDiv = document.getElementById("resultDiv");
 
     fetch('travel_recommendation_api.json')
@@ -10,7 +10,7 @@ function searchCondition() {
         .then(data => {
             let matchedCategory = null;
 
-            if (input.includes("beach" || input.includes("beaches"))) {
+            if (input.includes("beach") || input.includes("beaches")) { 
                 matchedCategory = "beaches";
             } else if (input.includes("temple")|| input.includes("temples")) {
                 matchedCategory = "temples";
@@ -21,7 +21,9 @@ function searchCondition() {
             if (!matchedCategory) {
                 resultDiv.innerHTML = "<p>No relevant places found. Try searching for 'beach', 'temple', or 'country'.</p>";
                 return;
+                
             };
+            
 
             let places = data[matchedCategory] || [];
             if (places.length === 0) {
@@ -49,6 +51,7 @@ function searchCondition() {
         
 
 function cleanSearch (){
+    resultDiv.innerHTML = ""
 
 };
 
