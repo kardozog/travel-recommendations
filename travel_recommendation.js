@@ -31,14 +31,15 @@ function searchCondition() {
                 return;
             }
             resultDiv.innerHTML = `<h2>Recommended ${matchedCategory}</h2>`;
+
             places.forEach(place => {
                 resultDiv.innerHTML += `
                     <div>
                         <h3>${place.name}</h3>
                         <img src="${place.imageUrl}" alt="${place.name}" width="200">
                         <p>${place.description}</p>
-                    </div>
-                `;
+                    </div> `;
+                
             });
         })
 
@@ -52,6 +53,7 @@ function searchCondition() {
 
 function cleanSearch (){
     resultDiv.innerHTML = ""
+
 
 };
 
