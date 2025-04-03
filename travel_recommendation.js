@@ -54,7 +54,6 @@ function searchCondition() {
 function cleanSearch (){
     resultDiv.innerHTML = ""
 
-
 };
 
 btnSearch.addEventListener('click', searchCondition); 
