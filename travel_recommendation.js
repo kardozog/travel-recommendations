@@ -18,18 +18,19 @@ function searchCondition() {
                 matchedCategory = "countries";
             }
 
-            if (!matchedCategory) {
-                resultDiv.innerHTML = "<p>No relevant places found. Try searching for 'beach', 'temple', or 'country'.</p>";
-                return;
-                
-            };
             
 
             let places = data[matchedCategory] || [];
             if (places.length === 0) {
-                resultDiv.innerHTML = "<p>No locations available for this search.</p>";
+                resultDiv.style.display = "none";
                 return;
             }
+            
+            
+                resultDiv.style.display = "block";
+            setTimeout(() => {
+                resultDiv.style.opacity = "1";
+            }, 10); // Smooth fade-in effect
             resultDiv.innerHTML = `<h2>Recommended ${matchedCategory}</h2>`;
 
             places.forEach(place => {
@@ -40,7 +41,8 @@ function searchCondition() {
                         <p>${place.description}</p>
                     </div> `;
                 
-            });
+            }); 
+        
         })
 
         .catch(error => {
@@ -53,6 +55,7 @@ function searchCondition() {
 
 function cleanSearch (){
     resultDiv.innerHTML = ""
+    resultDiv.style.display = "none"
 
 };
 
