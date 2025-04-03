@@ -22,7 +22,11 @@ function searchCondition() {
 
             let places = data[matchedCategory] || [];
             if (places.length === 0) {
-                resultDiv.style.display = "none";
+                resultDiv.style.display = "block";
+            setTimeout(() => {
+                resultDiv.style.opacity = "1";
+            }, 10); // Smooth fade-in effect
+            resultDiv.innerHTML = `<h4>No results found.</h4>`;
                 return;
             }
             
